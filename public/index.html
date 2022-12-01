@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitize App</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+</head>
+<body class="bg-gray-100" >
+    <!--app bar-->
+    <div class="flex md:hidden items-center justify-between mt-10 mb-6 px-4 bg-red-200">
+      <div class="">Digitize</div>
+      <div class="text-lg font-bold text-slate-800"> ساعت هوشمند</div>
+      <div class="w-7 h-7 bg-white shadow-lg flex items-center justify-center rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 stroke-slate-800">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+      </div>
+    </div>
+    <!--filter - sort mobile section-->
+    <div class="flex items-center justify-between px-4 py-2 space-x-4 m-9  md:hidden" >
+                <div class="bg-white rounded py-2 pr-4 flex   items-center justify-start w-1/2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-orange-600" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/></svg>
+                        </div>
+                        <span class="text-sm font-medium text-slate-800 mr-3">محبوبترین </span>
+                </div>
+                <div class="bg-white rounded py-2 pr-4 flex items-center justify-start w-1/2 ">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-6 h-6 stroke-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+                        </svg>
+                        
+                    </div>
+                    <span class="text-sm font-medium text-slate-800 mr-3">فيلتر : اپل</span>
+                </div>
+    </div>
+    <!--filter - sort mobile section/-->
+   
+    <!--content-->
+    <div class="md:px-6 container mx-auto max-w-screen-2xl grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8">
+        <!--sidebar-->
+            <div class="hidden md:block  col-span-4 lg:col-span-3 xl:col-span-2 row-span-2">
+                <div class="bg-white p-5 rounded-xl max-h-[calc(100vh_-_140px)] overflow-auto sticky top-28 ">
+                    <!--Categories-->
+                    <div class="mb-7">
+                            <div class="text-xl font-bold text-orange-400 mb-5">دسته بندی</div>
+                        <ul>
+                            <li class=" mb-1 ">
+                            <a href="#" class=" hover:bg-gray-50 cursor-pointer rounded-md flex items-center  text-orange-4 py-2 px-2">
+                                <span class="relative w-5 h-5 rounded-full bg-gray-200 bottom-2 ">
+                                    <img src="/assets/images/mobilephone.png" class="w-5 h-6 absolute top-1.5 right-1"   />
+                                </span>
+                                    <span class="mr-2">گوشی موبایل</span>
+                            </a>
+                            </li>
+                            <li  class="mb-1 ">
+                                <a href="#" class="hover:bg-gray-50 cursor-pointer rounded-md flex items-center  text-orange-4  00 py-2 px-2 ">
+                                <span class="relative w-5 h-5 rounded-full bg-gray-200 bottom-2 ">
+                                    <img src="/assets/images/mobilephone.png" class="w-5 h-6 absolute top-1.5 right-1"   />
+                                </span>
+                                    <span class="mr-2">گوشی موبایل</span>
+                            </a>
+                            </li>
+                            <li  class=" ">
+                                <a href="#" class="hover:bg-gray-50 cursor-pointer rounded-md flex items-center  text-orange-4  py-2 px-2 ">
+                                <span class="relative w-5 h-5 rounded-full bg-gray-200 bottom-2 ">
+                                    <img src="/assets/images/mobilephone.png" class="w-5 h-6 absolute top-1.5 right-1"   />
+                                </span>
+                                    <span class="mr-2">گوشی موبایل</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Categories/-->
+                    <!--Desktop filters-->
+                      <div x-data="{accordions:[
+                        {id:1, header:'محصول برند',content1:'اپل', content2:'سامسونگ', content3:'شیائومی', imageUrl:'/assets/images/product-brand.png'},
+                        {id:2, header:'رنگ محصول',content1:'سفید', content2:'مشکی', content3:'سرمه ای', imageUrl:'/assets/images/color-wheel.png'},
+                        {id:3, header:'محدوده ی  قیمت',content1:'دویست میلیون ریال', content2:'صد و پنجاه میلیون ریال', content3:'صد میلیون ریال',imageUrl:'/assets/images/banknote.png'},
+                      
+                    ]}" class="">
+                          <div  class="text-xl font-bold text-orange-400 mb-5">فیلتر</div>
+                        
+                          <!--single Accordion-->
+                                <template x-for="accordion in accordions"  :key="accordion.id" >
+                                    <div x-data="{accBrand : false}" class=" ">
+                                        <!--ACC Header -brand-->
+                                        <div @click="accBrand = !accBrand" class="mb-4 flex items-center justify-between hover:bg-gray-50 rounded-lg w-full p-2 cursor-pointer" >
+                                            <div class=" flex items-center ">
+                                                <img :src="accordion.imageUrl" class="w-5 h-6 "/>
+                                                <span x-text="accordion.header" class="mr-3" ></span>
+                                            </div>
+                                            <svg  :class="accBrand ? 'rotate-180':'' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-all duration-700">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                                                        
+                                        </div>
+                                        <!--Acc Content -brand-->
+                                        <div x-show="accBrand" class=" flex flex-col space-y-2">
+                                            <label for="appel"class="py-1 flex items-center cursor-pointer ">
+                                                <input type="checkbox" name="brand" id="appel" class="form-checkbox rounded text-orange-500 focus:ring-orange-500 "/>
+                                                <span x-text="accordion.content1" class="mr-2"></span>
+        
+                                            </label>
+                                            <label for="xiaumi"class="py-1 flex items-center cursor-pointer">
+                                                <input type="checkbox" name="brand" id="xiaumi" class="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                                                <span x-text="accordion.content2" class="mr-2"></span>
+        
+                                            </label>
+                                            <label for="xiaumi"class="py-1 flex items-center cursor-pointer">
+                                                <input type="checkbox" name="brand" id="xiaumi" class="form-checkbox rounded text-orange-500 focus:ring-orange-500"/>
+                                                <span x-text="accordion.content3" class="mr-2"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </template>
+                                <!--single Accordion/-->  
+                      </div>
+                    <!--Desktop filters-->
+                </div>
+            </div>
+
+        <!--/sidebar-->
+        <!--sortsection-->
+        
+        <div class=" hidden md:block col-span-8 lg:col-span-9 xl:col-span-10">
+        <div  x-data="{sort:1, activeClass:'text-slate-800 font-bold outline-0'}" class="bg-white px-4 p-1 flex space-x-4 items-center  text-gray-400 rounded-lg ">
+            <div class="bg-orange-100 p-2 justify-center items-center ml-4 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-7 h-7 stroke-orange-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+                  </svg>
+                  
+            </div>
+            <button @click="sort=1" :class="sort===1 ? activeClass:'' " class="py-4 relative ">
+                <span>محبوبترین</span>
+                <span x-show="sort===1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span>
+            </button>
+            <button @click="sort=2" :class="sort===2 ? activeClass:'' " class="py-4 relative ">
+                <span>ارزان ترین</span>
+                <span x-show="sort===2" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span>
+            </button>
+            <button @click="sort=3" :class="sort===3 ? activeClass:'' " class="py-4 relative">
+                <span>ارزان ترین</span>
+                <span x-show="sort===3" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span>
+            </button>
+            <button @click="sort=4" :class="sort===4 ? activeClass:'' " class="py-4 relative">
+                <span>ارزان ترین</span>
+                <span x-show="sort===4" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span>
+            </button>
+        </div>
+        </div>
+        <!--productssection-->
+        <div class="  col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10">
+                <!--product section-->
+    <div x-data="{
+        products:[ 
+        {id:1, title:'ساعت هوشمند سری 7',price:'۱۲,۳۵۰,۸۹۰ تومان'},
+        {id:2, title:'ساعت هوشمند سری 5',price:'۱۲,۳۵۴,۸۹۰ تومان'},
+        {id:3, title:'ساعت هوشمند سری 6',price:'۱۲,۵۵۴,۸۹۰ تومان'},
+        {id:4, title:'ساعت هوشمند سری 4',price:'۱۲,۲۵۴,۸۹۰ تومان'},
+        {id:5, title:'ساعت هوشمند سری 8',price:'۱۲,۹۹۹,۸۹۰ تومان'},
+        {id:6, title:'ساعت هوشمند سری 6',price:'۱۲,۳۵۴,۸۹۰ تومان'}
+        ]
+    }"
+    
+    class="grid gap-x-2 gap-y-8 grid-cols-2 lg:grid-cols-4 px-2 md:p-0 sm:gap-x-4 md:gap-x-6 md:gap-y-12">
+     
+
+     <!--single product-->   
+     <template x-for="product in products" :key="product.id">
+        <div class="bg-white rounded-xl p-2 shadow-md">
+            <!--product desc-->
+             <div class="mb-3 bg-gray-100 rounded-xl p-2">
+                <img src="/assets/images/apple watch 7-fococlipping-standard.png"/>
+             </div>
+             <div class="flex items-center justify-between w-full mb-4">
+                <span class="text-slate-200 text-sm mb-3 md:text-base">اپل</span>
+                <div x-data="{color:'red'}" class="flex items-center" >
+                    <div @click="color='red' " :class="color==='red'? 'ring-2 ring-red-400':'' "  class="w-6 h-6 sm:w-8 sm:h-8   flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
+                        <svg x-show="color==='red' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                          
+                    </div>
+                    <div @click="color='green' "  :class="color==='green'? 'ring-2 ring-green-400':'' " class="w-6 h-6 sm:w-8 sm:h-8    flex items-center justify-center rounded-full cursor-pointer bg-green-400 border-2 border-white -mr-1.5">
+                        <svg x-show="color==='green' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                    </div>
+                    <div @click="color='blue' "   :class="color==='blue'? 'ring-2 ring-blue-400':'' " class="w-6 h-6 sm:w-8 sm:h-8    flex items-center justify-center rounded-full cursor-pointer bg-blue-400 border-2 border-white -mr-1.5">
+                        <svg x-show="color==='blue' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                    </div>
+                </div>
+                
+             </div>
+             <!--product title-->
+             <div x-text="product.title" class="text-slate-800 text-xs font-bold mb-3  sm:text-base"></div>
+             <div x-text="product.price" class="text-orange-600 font-medium text-center sm:text-lg text-sm mb-3"></div>
+             <hr class="" />
+             <button class="w-full bg-red-100  font-bold text-orange-600 py-1 md:text-lg" >مشاهده و سفارش</button>
+        </div>
+     </template>
+        
+    </div>
+        </div>
+        
+    </div>
+ <!--content/-->
+
+
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</body>
+</html>
