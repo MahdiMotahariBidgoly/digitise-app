@@ -210,8 +210,58 @@
         
     </div>
  <!--content/-->
+<!--line 214-->
+<!--bottom navigation-->
 
+<div class= "md:hidden shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)] bg-white border border-t-2 fixed bottom-0 left-0 right-0 w-full rounded-tr-md rounded-tl-md px-2  mt-4 flex items-center">
+    <nav class="w-full">
+        <ul x-data='{activeBottomTab:1, activeTabClass:"text-slate-800 font-bold" }' class=" flex items-center justify-between space-x-2 w-full">
+            <li  @click="activeBottomTab = 1" :class="activeBottomTab === 1 ? activeTabClass:''" class="text-xs flex-auto  ml-2">
+                <a class="flex items-center justify-center py-4 w-full"  href="#">
+                    <span>
+                        <img src="/assets/images/home.png" class="w-5 h-6"/>
+                    </span>
+                    <span class="mr-1" x-show="activeBottomTab===1">
+                        خانه
+                    </span>
+                </a>
+            </li>
+            <li  @click="activeBottomTab = 2" :class="activeBottomTab === 2 ? activeTabClass:''" class="text-xs flex-auto  " >
+                <a class="flex items-center justify-center py-4 w-full"  href="#">
+                    <span>
+                        <img src="/assets/images/categories-icon (2).png" class="w-5 h-6"   />
+                    </span>
+                    <span class="mr-1" x-show="activeBottomTab===2">
+                        دسته بندی
+                    </span>
+                </a>
+            </li>
+            <li  @click="activeBottomTab = 3" :class="activeBottomTab === 3 ? activeTabClass:''" class=" text-xs  flex-auto " >
+                <a class="flex items-center justify-center py-4 w-full"  href="#">
+                    <span>
+                        <img src="/assets/images/purchase_icon.png" class="w-5 h-6"   />
+                    </span>
+                    <span class="mr-1" x-show="activeBottomTab===3">
+                        سبد خرید
+                    </span>
+                </a>
+            </li>
+            <li  @click="activeBottomTab = 4" :class="activeBottomTab === 4 ? activeTabClass:''" class=" text-xs flex-auto " >
+                <a class="flex items-center justify-center py-4 w-full"  href="#">
+                    <span>
+                        <img src="/assets/images/favorite.png" class="w-5 h-6"   />
+                    </span>
+                    <span class="mr-1" x-show="activeBottomTab===4">
+                        علاقه مندی ها 
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+   </div>
+ <!--bottom navigation/-->
 
+    
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
